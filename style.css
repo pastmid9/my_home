@@ -1,121 +1,155 @@
 * {
-    background-color: #003049;
-}
-
-/* HEADER */
-header {
-    display: flex;
-    justify-content: left;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #003049;
-    align-items: center;
-    color: white;
-    padding-left: 5%;
-    font-family: Arial, Helvetica, sans-serif;
-}
-/* HEADER */
-
-/* NAVIGATION BAR */
-ul {
-    list-style-type: none;
     margin: 0;
-    padding-right: 1;
-    overflow: hidden;
-    background-color: #003049;
-}   
-
-li {
-    float: right;
-}
-
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+    padding: 0;
+    box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-li a:hover {
-    background-color: #eae2b7;
-    color: black;
-    transition: 350ms;
-}
-/* NAVIGATION BAR */
-
-iframe.spotify {
-    display: flex;
-    justify-content: center;
-    padding-top: 12%;
-}
-
-p.first {
-    display: flex;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #eae2b7;
-    color: black;
-    justify-content: center;
-}
-h1 a{
-    text-decoration: none;
-}
-
-h1 a:visited, a:hover, a:active{
-    text-decoration: none;
-    color: initial;
     color: white;
 }
-h2 {
-    background-color:#eae2b7;
-    color: black;
+
+body {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    background-color: #012a4a;
+    min-height: 100vh;
+    justify-content: space-between;
+    padding: 20px;
+    position: relative;
 }
 
-.dashstar{
+nav {
+    background-color: #468faf;
+    width: 110px;  
+    height: 300px;
+    border-radius: 80px;  /* Keeps the oval shape */
     display: flex;
+    flex-direction: column;
     align-items: center;
-    margin: auto;
-    gap: 20px;
+    justify-content: center;
+    padding: 15px;
+    position: fixed;  /* Makes it stay in place while scrolling */
+    top: 50%;  /* Center vertically */
+    left: 20px;  /* Adjust left positioning */
+    transform: translateY(-50%);  /* Keeps it centered */
+}
+nav h1{
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 20px;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
-p.d_para {
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
-    flex: 1;
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    width: 100%; /* Prevents stretching */
 }
 
-.gettin_hot {
+nav ul li {
+    margin-bottom: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #01497c;
+}
+
+.main-index {
     display: flex;
-    flex-direction: row-reverse;
-    align-items: flex-start;
-    gap: 30px;
-    margin: 40px auto;
-    max-width: 500px;
+    justify-content: center; /* Centers iframe horizontally */
+    align-items: center; /* Centers iframe vertically */
+    flex-grow: 1;
+    height: 100vh;
     width: 100%;
 }
 
-.g_para {
+.spotify-main {
+    border-radius: 12px;
+    width: 100%;
+    height: 800px;
+    max-width: 1024px; 
+    padding-right: 140px;
+}
+
+.right-section {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 400px;
+    height: 620px;
+    border-radius: 20px; /* Keeps it rectangular but slightly rounded */
+    padding: 20px;
+    text-align: center;
+    background-color: #468faf;
+}
+
+.right-section h2 {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 12px;
+
+}
+.right-section img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.right-section p {
+    font-size: 20px;
+    text-align: center;
+}
+
+.main-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.main-section h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.main-section p {
     font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
+    margin-bottom: 20px;
+    line-height: 1.5;  /* Adds space between lines in the paragraph */
+    width: 100%;  /* Adjust width to be responsive */
+    max-width: 700px;  /* Prevent the paragraph from stretching too much */
 }
 
 
-.g_para ol {
-    padding-left: 20px;
-    margin-top: 10px;
-    color: white !important;
+.main-section ol {
+    font-size: 16px;
+    margin-bottom: 20px; /* Adds spacing between the list and image */
+    width: 100%;
 }
 
-.g_para li {
-    line-height: 1.5;
-    margin-bottom: 8px;
-    color: white;
+.main-section img {
+    height: 512px;
+    width: 512px;
+    max-width: 600px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.main-section h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
 }
